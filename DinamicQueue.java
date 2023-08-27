@@ -1,6 +1,6 @@
 public class DinamicQueue <T>{
     private static class Node<T>{
-        public DinamicQueue.Node next;
+        public DinamicQueue.Node <T> next;
         public T data;
     }
 
@@ -16,8 +16,8 @@ public class DinamicQueue <T>{
             base = node;
             top  = node;
         }else{
-            node.next  = node;
-            top        = node;
+            node.next  = top;
+            base        = node;
         }
 
     }
