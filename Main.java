@@ -29,7 +29,7 @@ public class Main {
         System.out.print("Digite o valor de preenchimento: ");
         int fillValue = scanner.nextInt();
 
-        System.out.print("Escolha o algoritmo (1 para Stack, 2 para Queue): ");
+        System.out.print("Escolha o algoritmo (1-Pilha, 2-Fila): ");
         int algorithmChoice = scanner.nextInt();
 
         FloodFill floodFillAlgorithm;
