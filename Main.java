@@ -34,15 +34,16 @@ public class Main {
 
         FloodFill floodFillAlgorithm;
         if (algorithmChoice == 1) {
-            floodFillAlgorithm = new FloodFillStack();
+            floodFillAlgorithm = new FloodFillStack();                                        // Cria uma instância do algoritmo de Pilha
         } else if (algorithmChoice == 2) {
-            floodFillAlgorithm = new FloodFillQueue();
+            floodFillAlgorithm = new FloodFillQueue();                                        // Cria uma instância do algoritmo de Fila
         } else {
             System.out.println("Escolha de algoritmo inválida. Saindo do programa.");
             return;
         }
 
         try {
+            // Executa o algoritmo de Flood Fill com as coordenadas iniciais, valor original e valor de preenchimento
             floodFillAlgorithm.performFloodFill(matrix, startX, startY, matrix[startY][startX], fillValue);
         } catch (IllegalArgumentException e) {
             System.out.println("Coordenadas iniciais inválidas. Saindo do programa.");
